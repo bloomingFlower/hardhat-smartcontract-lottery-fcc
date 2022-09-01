@@ -48,6 +48,7 @@ contract Raffle is VRFConsumerBaseV2 {
         emit RaffleEnter(msg.sender);
     }
 
+    //chainlink keeper
     function requestRandomWinner() external {
         uint256 requestId = i_vrfCoordinator.requestRandomWords(
             i_gaslane, //gaslane
