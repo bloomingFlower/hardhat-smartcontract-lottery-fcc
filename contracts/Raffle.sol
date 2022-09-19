@@ -131,6 +131,7 @@ contract Raffle is VRFConsumerBaseV2, KeeperCompatibleInterface {
         uint256, /*requestId*/
         uint256[] memory randomWords
     ) internal override {
+        console.log("I am here");
         uint256 indexOfWinner = randomWords[0] % s_players.length;
         address payable recentWinner = s_players[indexOfWinner];
         s_recentWinner = recentWinner;
